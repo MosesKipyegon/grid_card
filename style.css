@@ -1,0 +1,127 @@
+/* font import */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+  /* Primary colours */
+  --p-clr-cyan: hsl(179, 62%, 43%);
+  --p-clr-bright-yellow: hsl(71, 73%, 54%);
+
+  /* Neutral */
+  --n-clr-light-gray: hsl(204, 43%, 93%);
+  --n-clr-grayish-blue: hsl(218, 22%, 67%);
+
+  /* Body copy */
+  --fs-p: 1em;
+
+  /* font */
+  --ff: 'Karla', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--n-clr-light-gray);
+  font-family: var(--ff);
+  margin: 0 auto;
+}
+
+.container {
+  display: grid;
+  grid: repeat(3, 280px) / auto-flow;
+  justify-content: center;
+  max-width: 50%;
+  background: white;
+  margin: 0 auto;
+  border-radius: .5em .5em 0 0;
+}
+
+.card {
+  padding: 2em;
+}
+
+.card__header {
+  color: var(--p-clr-cyan);
+}
+
+.card__body {
+  color: var(--p-clr-bright-yellow);
+  margin-top: 1.5em;
+}
+
+.card__copy {
+  color: var(--n-clr-grayish-blue);
+  margin-top: 1em;
+  line-height: 1.5em;
+}
+
+.sidebar {
+  display: grid;
+  grid-template-columns: 341px 341px;
+}
+
+.subscription {
+  background: var(--p-clr-cyan);
+  padding: 3em;
+  color: white;
+  border-radius: 0 0 0 .5em;
+}
+
+.sub__price {
+  font-size: 2em;
+  margin-top: 0.625em;
+}
+
+.sub__period {
+  color: var(--n-clr-light-gray);
+  font-size: .5em;
+  font-weight: 500;
+  /* float: right; */
+}
+
+.sub__access {
+  padding-top: 0.3125em;
+  padding-bottom: 2em;
+}
+
+.button {
+  background: var(--p-clr-bright-yellow);
+  padding: 1em 7.2em;
+  border: none;
+  border-radius: .3em;
+  color: white;
+  font-family: var(--ff);
+  font-weight: 700;
+}
+
+.why-us {
+  background: var(--n-clr-grayish-blue);
+  padding: 3em;
+  border-radius: 0 0 .5em 0;
+}
+
+.section__header {
+  color: white;
+}
+
+.section__copy {
+  color: var(--n-clr-light-gray);
+  font-size: var(--fs-p);
+  font-weight: 100;
+  line-height: 1.5em;
+  max-width: 90%;
+  margin-top: 1.5em;
+}
+
+
+
+
+/* Attribution */
+
+.attribution{
+  position: absolute;
+  bottom: 0;
+}
