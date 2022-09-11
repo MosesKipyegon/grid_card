@@ -31,16 +31,19 @@ body {
 
 .container {
   display: grid;
-  grid: repeat(3, 280px) / auto-flow;
-  justify-content: center;
-  max-width: 50%;
+  grid: repeat(3, 230px) / auto-flow;
+  /* justify-content: center; */
+  max-width: 46%;
+  height: 200px;
+  transform: translateY(23%);
   background: white;
   margin: 0 auto;
   border-radius: .5em .5em 0 0;
 }
 
 .card {
-  padding: 2em;
+  padding: 2.5em;
+  max-width: 100%;
 }
 
 .card__header {
@@ -60,12 +63,13 @@ body {
 
 .sidebar {
   display: grid;
-  grid-template-columns: 341px 341px;
+  grid-template-columns: 314px 314px;
+  margin-top: -30px;
 }
 
 .subscription {
   background: var(--p-clr-cyan);
-  padding: 3em;
+  padding: 2em;
   color: white;
   border-radius: 0 0 0 .5em;
 }
@@ -89,7 +93,7 @@ body {
 
 .button {
   background: var(--p-clr-bright-yellow);
-  padding: 1em 7.2em;
+  padding: 1em 7.3em;
   border: none;
   border-radius: .3em;
   color: white;
@@ -97,9 +101,13 @@ body {
   font-weight: 700;
 }
 
+.button:hover {
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
 .why-us {
   background: var(--n-clr-grayish-blue);
-  padding: 3em;
+  padding: 2em;
   border-radius: 0 0 .5em 0;
 }
 
