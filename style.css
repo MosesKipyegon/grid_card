@@ -33,89 +33,92 @@ body {
 @media only screen and (max-width: 375px) {
 
   .card__column {
+    display: flex;
+    flex-direction: column;
     background: white;
-    
-    
-    padding: 1.5em;
+    max-width: 70%;
+    padding: 1.4em;
     border-radius: .3em .3em 0 0;
+    margin: 0 auto;
   }
 
   .card__title {
     color: var(--p-clr-cyan);
-    font-size: 15px;
-    margin-bottom: 1.3em;
+    margin-bottom: 1em;
+    font-size: Medium;
   }
 
   .card__subtitle {
     color: var(--p-clr-bright-yellow);
-    font-size: 12px;
-    font-weight: 900;
-    max-width: 90%;
-    margin-bottom: 1.3em;
+    font-size: smaller;
+    margin-bottom: 1.5em;
   }
 
   .card__copy {
     color: var(--n-clr-grayish-blue);
-    font-size: 10px;
-    line-height: 2em;
+    font-size: small;
+    line-height: 1.8em;
   }
 
   .card__row {
     display: flex;
     flex-direction: column;
-    max-width: 250px;
-    margin: 0 auto;
   }
 
   .card__subscription {
-    background-color: var(--p-clr-cyan);
+    background: var(--p-clr-cyan);
+    min-width: 50%;
     padding: 1.5em;
+    margin: 0 auto;
   }
 
   .card__header {
-    color: var(--n-clr-light-gray);
+    color: white;
     margin-bottom: 1em;
+    font-size: small;
   }
 
   span {
-    font-size: 25px;
-    font-weight: 700;
     color: white;
+    font-size: 1.7em;
   }
 
   small {
     color: var(--n-clr-light-gray);
-    font-weight: 100;
+    font-size: .8em;
   }
 
-  .row__copy {
+  .subscription__copy {
     color: var(--n-clr-light-gray);
-    font-size: 12px;
-    margin-top: 1em;
+    font-size: .8em;
+    margin-top: .7em;
     margin-bottom: 2em;
   }
 
   button {
     background: var(--p-clr-bright-yellow);
     color: white;
-    font-family: var(--ff);
-    font-weight: 700;
+    font: var(--ff);
+    font-size: 1em;
+    min-width: 40%;
+    padding: .6em 5em;
     border: none;
-    padding: .8em 5.4em;
-    border-radius: .3em;
+    border-radius: .3em
   }
 
   .card__why {
     background: var(--clr-primary-cyan-light);
-    padding: 1.5em;
+    min-width: 70%;
+    padding: 2em;
+    margin: 0 auto;
     border-radius: 0 0 .3em .3em;
   }
   
   .card__list {
-    list-style-type: none;
     color: var(--n-clr-light-gray);
-    font-size: 11px;
+    list-style-type: none;
     line-height: 1.5em;
+    font-size: small;
   }
   
 }
@@ -130,6 +133,7 @@ body {
   background: white;
   max-width: 38em;
   padding: 2em;
+  border-radius: .35em .35em 0 0;
 }
 
 .card__title {
@@ -155,6 +159,7 @@ body {
 .card__subscription {
   background: var(--p-clr-cyan);
   padding: 2em;
+  border-radius: 0 0 0 .35em ;
 }
 
 .card__header {
@@ -172,7 +177,7 @@ small {
   color: var(--n-clr-light-gray);
 }
 
-.row__copy {
+.subscription__copy {
   color: var(--n-clr-light-gray);
   font-size: var(--fs-p);
   margin-top: .5em;
@@ -192,6 +197,7 @@ button {
   background: var(--clr-primary-cyan-light);
   width: 303px;
   padding: 2em;
+  border-radius: 0 0 .35em 0;
 }
 
 .card__list {
@@ -200,107 +206,6 @@ button {
   font-size: 12px;
   line-height: 1.4em;
 }
-
-
-
-
-
-/* .container {
-  display: grid;
-  grid: repeat(3, 230px) / auto-flow;
-  max-width: 46%;
-  height: 200px;
-  transform: translateY(23%);
-  background: white;
-  margin: 0 auto;
-  border-radius: .5em .5em 0 0;
-}
-
-.card {
-  padding: 2.5em;
-  max-width: 100%;
-}
-
-.card__header {
-  color: var(--p-clr-cyan);
-}
-
-.card__body {
-  color: var(--p-clr-bright-yellow);
-  margin-top: 1.5em;
-}
-
-.card__copy {
-  color: var(--n-clr-grayish-blue);
-  margin-top: 1em;
-  line-height: 1.5em;
-}
-
-.sidebar {
-  display: grid;
-  grid-template-columns: 314px 314px;
-  margin-top: -30px;
-}
-
-.subscription {
-  background: var(--p-clr-cyan);
-  padding: 2em;
-  color: white;
-  border-radius: 0 0 0 .5em;
-}
-
-.sub__price {
-  font-size: 2em;
-  margin-top: 0.625em;
-}
-
-.sub__period {
-  color: var(--n-clr-light-gray);
-  font-size: .5em;
-  font-weight: 500;
-  /* float: right; */
-/* }
-
-.sub__access {
-  padding-top: 0.3125em;
-  padding-bottom: 2em;
-}
-
-.button {
-  background: var(--p-clr-bright-yellow);
-  padding: 1em 7.3em;
-  border: none;
-  border-radius: .3em;
-  color: white;
-  font-family: var(--ff);
-  font-weight: 700;
-}
-
-.button:hover {
-  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.4);
-}
-
-.why-us {
-  background: var(--n-clr-grayish-blue);
-  padding: 2em;
-  border-radius: 0 0 .5em 0;
-}
-
-.section__header {
-  color: white;
-}
-
-.section__copy {
-  color: var(--n-clr-light-gray);
-  font-size: var(--fs-p);
-  font-weight: 100;
-  line-height: 1.5em;
-  max-width: 90%;
-  margin-top: 1.5em;
-} */ */
-
-
-
 
 /* Attribution */
 
