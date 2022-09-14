@@ -30,13 +30,23 @@ body {
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 375px) {
+@media (min-width: 50em) { 
+
+  :root {
+    --max-width: 375px;
+    --padding: 1rem;
+  }
+
+  .main__container {
+    width: min(var(--max-width, 100%));
+    margin-inline: auto;
+  }
 
   .card__column {
     display: flex;
     flex-direction: column;
     background: white;
-    max-width: 70%;
+    width: 90%;
     padding: 1.4em;
     border-radius: .3em .3em 0 0;
     margin: 0 auto;
@@ -66,9 +76,11 @@ body {
   }
 
   .card__subscription {
+    display: flex;
+    flex-direction: column;
     background: var(--p-clr-cyan);
-    min-width: 50%;
-    padding: 1.5em;
+    max-width: 90%;
+    padding: 1.4em;
     margin: 0 auto;
   }
 
@@ -90,7 +102,7 @@ body {
 
   .subscription__copy {
     color: var(--n-clr-light-gray);
-    font-size: .8em;
+    font-size: .6em;
     margin-top: .7em;
     margin-bottom: 2em;
   }
@@ -107,11 +119,13 @@ body {
   }
 
   .card__why {
+    display: flex;
+    flex-direction: column;
     background: var(--clr-primary-cyan-light);
-    min-width: 70%;
-    padding: 2em;
+    max-width: 90%;
+    padding: 1.5em;
     margin: 0 auto;
-    border-radius: 0 0 .3em .3em;
+    
   }
   
   .card__list {
@@ -200,7 +214,7 @@ button:hover {
 
 .card__why {
   background: var(--clr-primary-cyan-light);
-  width: 303px;
+  width: 90%;
   padding: 2em;
   border-radius: 0 0 .35em 0;
 }
