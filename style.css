@@ -30,15 +30,19 @@ body {
   margin: 0 auto;
 }
 
-@media (min-width: 50em) { 
+@media (max-width: 50em) { 
 
   :root {
     --max-width: 375px;
     --padding: 1rem;
   }
 
+  body {
+    background: var(--n-clr-light-gray);
+  }
+
   .main__container {
-    width: min(var(--max-width, 100%));
+    width: min(var(--max-width), 100%);
     margin-inline: auto;
   }
 
@@ -79,6 +83,7 @@ body {
     display: flex;
     flex-direction: column;
     background: var(--p-clr-cyan);
+    width: 375px;
     max-width: 90%;
     padding: 1.4em;
     margin: 0 auto;
@@ -111,9 +116,9 @@ body {
     background: var(--p-clr-bright-yellow);
     color: white;
     font: var(--ff);
-    font-size: 1em;
+    font-size: .8em;
     min-width: 40%;
-    padding: .6em 5em;
+    padding: .6em 6em;
     border: none;
     border-radius: .3em
   }
@@ -202,9 +207,11 @@ small {
 button {
   background: var(--p-clr-bright-yellow);
   font-family: var(--ff);
+  font-weight: 700;
+  font-size: 1em;
   color: white;
   border: none;
-  padding: 1em 7.3em;
+  padding: 1em 6.5em;
   border-radius: .3em;
 }
 
